@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>JS INDEX</title>
+    </head>
+    <body> 
+         <form onsubmit="return false">
+            <p>buku1 :<input type="text" id="novel" placeholder ="novel"></p>
+            <p>buku2 :<input type="text" id="biografi" placeholder="biografi"></p>
+            <p>buku3 :<input type="text" id="cerita_rakyat" placeholder="cerita_rakyat"></p>
+            <button onclick="sles()">
+                Klik Di sini  
+            </button>
+        </form>
+      
+        </p>
+        <script>
+            function sles() {
+                let x = document.getElementById("novel").value;
+                let y = document.getElementById("biografi").value;
+                let i = document.getElementById("cerita_rakyat").value;
+
+
+                class buku {
+                
+                jmlHal;
+                warna;
+                novel;
+                biografi;
+                cerita_rakyat;
+        
+                constructor(novel, biografi, cerita_rakyat, jmlHal, warna) {
+                    this.jmlHal = 50;
+                    this.warna = "biru";
+                    this.jmlHal1 = 60;
+                    this.warna1 = "merah";
+                    this.jmlHal2 = 70;
+                    this.warna2 = "hijau";
+                    this.novel = x;
+                    this.biografi = y;
+                    this.cerita_rakyat = i; 
+
+                }
+        
+                baca(novel) {
+                    return( "buku " +novel+ " ini di baca");
+                }
+                jual(biografi){
+                    return("buku " +biografi+ " ini di jual");
+                }
+                pinjam(cerita_rakyat){
+                    return("buka " +cerita_rakyat+ " ini di pinjam");
+                }
+
+                
+            }
+        
+            let novel = new buku;
+            let biografi = new buku;
+            let cerita_rakyat = new buku;
+
+            console.log(novel.baca(x));
+            console.log(novel.jmlHal);
+            console.log(novel.warna);
+
+            console.log(biografi.jual(y));
+            
+            console.log(biografi.jmlHal1);
+            console.log(biografi.warna1);
+
+            console.log(cerita_rakyat.pinjam(i));
+            
+            console.log(cerita_rakyat.jmlHal2);
+            console.log(cerita_rakyat.warna2);
+
+        
+        }
+        </script>
+    </body>
+</html>   
